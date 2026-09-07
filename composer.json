@@ -2,21 +2,30 @@
     "name": "jeffersongoncalves/laravel-onesignal",
     "description": "Laravel wrapper for the OneSignal REST API",
     "keywords": [
+        "jeffersongoncalves",
         "laravel",
-        "laravel-onesignal"
+        "laravel-onesignal",
+        "onesignal",
+        "push-notifications",
+        "notifications",
+        "api",
+        "client"
     ],
     "homepage": "https://github.com/jeffersongoncalves/laravel-onesignal",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
-            "name": "Jefferson Simão Gonçalves",
-            "email": "gerson.simao.92@gmail.com"
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^12.0|^13.0"
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
@@ -27,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jeffersongoncalves\\LaravelOnesignal\\": "src/"
+            "JeffersonGoncalves\\LaravelOnesignal\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jeffersongoncalves\\LaravelOnesignal\\Tests\\": "tests/"
+            "JeffersonGoncalves\\LaravelOnesignal\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -52,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jeffersongoncalves\\LaravelOnesignal\\LaravelOnesignalServiceProvider"
+                "JeffersonGoncalves\\LaravelOnesignal\\LaravelOnesignalServiceProvider"
             ],
             "aliases": {
-                "LaravelOnesignal": "Jeffersongoncalves\\LaravelOnesignal\\Facades\\LaravelOnesignal"
+                "OneSignal": "JeffersonGoncalves\\LaravelOnesignal\\Facades\\OneSignal"
             }
         }
     },

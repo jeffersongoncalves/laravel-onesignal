@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeffersongoncalves\LaravelOnesignal;
+namespace JeffersonGoncalves\LaravelOnesignal;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -11,8 +11,16 @@ class LaravelOnesignalServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-onesignal')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigrations();
+            ->hasConfigFile();
+    }
+
+    public function packageRegistered(): void
+    {
+        $this->app->singleton(OneSignal::class, function () {
+            return new OneSignal(
+                (string) config('laravel-onesignal.app_id'),
+                (string) config('laravel-onesignal.rest_api_key'),
+            );
+        });
     }
 }

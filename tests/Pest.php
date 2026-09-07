@@ -1,3 +1,5 @@
 <?php
 
-uses(Jeffersongoncalves\LaravelOnesignal\Tests\TestCase::class)->in('Feature', 'Unit');
+use JeffersonGoncalves\LaravelOnesignal\Tests\TestCase;
+
+uses(TestCase::class)->in('Feature', 'Unit');
